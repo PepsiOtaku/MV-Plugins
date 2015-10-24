@@ -56,14 +56,14 @@ PO.Bg = PO.Bg || {};
  * 
  * @param Key Config
  * @desc background bitmap file in img/parallaxes.
- * Requires: KeyboardConfig plugin (prioritize before this one)
+ * Requires: KeyboardConfig.js (prioritize before this one)
  * @default 
  * 
  * @param Gamepad Config
  * @desc background bitmap file in img/parallaxes.
- * Requires: GamepadConfig plugin (prioritize before this one)
+ * Requires: GamepadConfig.js (prioritize before this one)
  * @default 
- * 
+ *
  * @help 
  * ============================================================================
  * Instructions
@@ -75,7 +75,10 @@ PO.Bg = PO.Bg || {};
  * The parameters for individual backgrounds override the global background
  * parameter.
  * 
- * Additional plugins supported: KeyboardConfig.js & GamkepadConfig.js
+ * Additional plugins supported: 
+ *   - KeyboardConfig.js 
+ *   - GamepadConfig.js
+ *
  * If you find any more plugins that contain menus that this does not work 
  * with, please contact me on RMN or RPGMakerWeb, and I'll add it.
  *
@@ -88,17 +91,17 @@ PO.Bg = PO.Bg || {};
 // Parameter Variables
 //=============================================================================
 PO.Parameters = PluginManager.parameters('PO_MenuBackgroundImage');
-PO.Bg.Global = String(PO.Parameters['Global'] || '');
-PO.Bg.Main = String(PO.Parameters['Main Menu'] || '');
-PO.Bg.Item = String(PO.Parameters['Item'] || '');
-PO.Bg.Skill = String(PO.Parameters['Skill'] || '');
-PO.Bg.Equip = String(PO.Parameters['Equip'] || '');
-PO.Bg.Status = String(PO.Parameters['Status'] || '');
-PO.Bg.Options = String(PO.Parameters['Options'] || '');
-PO.Bg.File = String(PO.Parameters['File'] || '');
-PO.Bg.GameEnd = String(PO.Parameters['End Game'] || '');
-PO.Bg.KeyConfig = String(PO.Parameters['Key Config'] || '');
-PO.Bg.GamepadConfig = String(PO.Parameters['Gamepad Config'] || '');
+PO.Bg.Global = String(PO.Parameters['Global']);
+PO.Bg.Main = String(PO.Parameters['Main Menu']);
+PO.Bg.Item = String(PO.Parameters['Item']);
+PO.Bg.Skill = String(PO.Parameters['Skill']);
+PO.Bg.Equip = String(PO.Parameters['Equip']);
+PO.Bg.Status = String(PO.Parameters['Status']);
+PO.Bg.Options = String(PO.Parameters['Options']);
+PO.Bg.File = String(PO.Parameters['File']);
+PO.Bg.GameEnd = String(PO.Parameters['End Game']);
+PO.Bg.KeyConfig = String(PO.Parameters['Key Config']);
+PO.Bg.GamepadConfig = String(PO.Parameters['Gamepad Config']);
 
 // load bitmap that set in plugin parameter
 _Scene_Menu_createBackground = Scene_Menu.prototype.createBackground;
